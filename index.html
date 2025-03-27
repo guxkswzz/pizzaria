@@ -3,22 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria</title>
+    <title>Dev Pizzas</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
 <form class="form">
-    <p id="heading">Login</p>
+    <p>Registrar</p>
       <input autocomplete="off" placeholder="Usuário" class="input-field" type="text">
+      <input autocomplete="off" placeholder="Email" class="input-field" type="text">
+      <input autocomplete="off" placeholder="Telefone" class="input-field" type="text">
     </div>
       <input placeholder="Senha" class="input-field" type="password">
     </div>
     <div class="btn">
     <button class="button1">Login</button>
-    <button class="button2">Registrar
-    </button>
     </div>
-    <button class="button3">Esqueci minha senha</button>   
+    <button class="button2">Esqueci minha senha</button>  
+    <script>
+      document.getElementById('loginButton').addEventListener('click', function() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+  
+    alert(`Usuário: ${username}\nSenha: ${password}`);
+});
+
+document.getElementById('registerButton').addEventListener('click', function() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    alert('Função de registro ainda não implementada.');
+});
+
+document.getElementById('forgotPasswordButton').addEventListener('click', function() {
+    const username = document.getElementById('username').value;
+    alert(`Função de recuperação de senha para o usuário: ${username}`);
+});
+
+    </script> 
 </form>
 </body>
 </html>
